@@ -10,7 +10,8 @@ body {
     resize: none;
     color: #000000;
     border-left: 1px solid black;
-    padding: 10px;
+    margin: 10px;
+    width: 100%;
   }
   
   .jumbotron {
@@ -61,12 +62,20 @@ body {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    position: relative;
     background-color: #06aed5;
     color: white;
+    align-items: center;
+    margin: 10px 0;
   }
+
+  #icon {
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-top: 5px;
+}
   
   .saveBtn i:hover {
-    font-size: 20px;
-    transition: all 0.3s ease-in-out;
+    cursor: pointer;
   }
   
