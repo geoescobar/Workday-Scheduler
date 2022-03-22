@@ -6,7 +6,6 @@ $("#currentDay").text(today.format("dddd, MMMM Do"));
 var scheduledHours = [];
 
 // create a for loop for the hours of 9am-5pm & design 
-// center save button 
 for (var hour = 9; hour < 18; hour++) {
     scheduledHours.push(moment({hour}).format('h  a'));
     $('.container').append(`<div class="row time-block" data-time="${hour}"> 
