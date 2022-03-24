@@ -20,5 +20,5 @@ In this activity, we were tasked with making a functional workday scheduler that
 
 * Below are screenshots to my Github project repository and pages link. 
 
-![img]()
-![img]()
+![img](./HW5-Repo.png)
+![img](./HW5-Pages.png)
