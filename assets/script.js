@@ -1,14 +1,16 @@
-// variable to add current date in the header to update daily 
+// Adding the current date to the header to actively change daily 
 var today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
 
-// create var for the scheduled workday hours 
 
-// create a for loop for the hours of 9am-5pm & design & add columns for the design 
+
+// Create a for loop for the hours of 9am-5pm & design
 function loadTimeBlock() {
   for (var hour = 9; hour < 18; hour++) {
     var currentHour = Number(moment().format('h'));
     console.log('current hour', currentHour);
+
+    // Create if statements for so the browser knows when to activate past, present, and future elements of CSS to the page
     var timeClass;
     if (currentHour > hour) {
       timeClass = 'past'
@@ -18,7 +20,7 @@ function loadTimeBlock() {
       timeClass = 'future'
     }
 
-    // grab text area text from local storage if it exists 
+    // Record input text from local storage if it exists otherwise leave the input text fields blank
     var localStorageKey = `workdayScheduler-${hour}`
     var inputText;
     if (localStorage.getItem(localStorageKey)) {
@@ -26,7 +28,8 @@ function loadTimeBlock() {
     } else {
       inputText = ''
     }
-
+// Creating divs for the columns and rows. Also adding corresponding classes.
+// Adding moment.js to fill int the time blocks 
     $('.container').append(`<div class="row time-block" data-time="${hour}"> 
          <!--hour column-->
              <div class="col-sm col-md-2 hour"> 
@@ -46,13 +49,14 @@ function loadTimeBlock() {
   }
 }
 
-// saving the input into local storage 
+// Saving the input text into local storage 
 function saveInput(hour, text) {
   console.log(hour, text)
   localStorage.setItem(`workdayScheduler-${hour}`, text)
 }
 
-// adding event listeners to all the buttons 
+
+// Adding event listeners to all the save button since they aren't populated originally on the HTML file 
 function addEventListeners() {
   $('.saveBtn').each(function () {
     $(this).click(function () {
@@ -64,7 +68,7 @@ function addEventListeners() {
   })
 }
 
-//start app
+// Invoking the functions 
 loadTimeBlock();
 addEventListeners();
 
