@@ -7,14 +7,15 @@ $("#currentDay").text(today.format("dddd, MMMM Do"));
 // Create a for loop for the hours of 9am-5pm & design
 function loadTimeBlock() {
   for (var hour = 9; hour < 18; hour++) {
-    var currentHour = Number(moment().format('h'));
+    var currentHour = Number(moment().format('HH'));
     console.log('current hour', currentHour);
 
     // Create if statements for so the browser knows when to activate past, present, and future elements of CSS to the page
     var timeClass;
-    if (currentHour > hour) {
+    if (currentHour >= hour) {
+      console.log()
       timeClass = 'past'
-    } else if (currentHour == hour) {
+    } else if (currentHour === hour) {
       timeClass = 'present'
     } else {
       timeClass = 'future'
