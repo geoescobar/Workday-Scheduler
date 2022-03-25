@@ -13,7 +13,6 @@ function loadTimeBlock() {
     // Create if statements for so the browser knows when to activate past, present, and future elements of CSS to the page
     var timeClass;
     if (currentHour >= hour) {
-      console.log()
       timeClass = 'past'
     } else if (currentHour === hour) {
       timeClass = 'present'
@@ -30,7 +29,7 @@ function loadTimeBlock() {
       inputText = ''
     }
 // Creating divs for the columns and rows. Also adding corresponding classes.
-// Adding moment.js to fill int the time blocks 
+// Adding moment.js to fill in the time blocks 
     $('.container').append(`<div class="row time-block" data-time="${hour}"> 
          <!--hour column-->
              <div class="col-sm col-md-2 hour"> 
@@ -57,7 +56,7 @@ function saveInput(hour, text) {
 }
 
 
-// Adding event listeners to all the save button since they aren't populated originally on the HTML file 
+// Adding event listeners to all the save button 
 function addEventListeners() {
   $('.saveBtn').each(function () {
     $(this).click(function () {
