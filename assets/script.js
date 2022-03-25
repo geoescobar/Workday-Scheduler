@@ -13,7 +13,7 @@ function loadTimeBlock() {
 
     // Create if statements for so the browser knows when to activate past, present, and future elements of CSS to the page
     var timeClass;
-    if (currentHour >= hour) {
+    if (currentHour > hour) {
       timeClass = 'past'
     } else if (currentHour === hour) {
       timeClass = 'present'
