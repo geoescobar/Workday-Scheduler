@@ -16,9 +16,16 @@ In this activity, we were tasked with making a functional workday scheduler that
 
 * Step 5: Speaking of local storage. The final step was adding the information to local storage. This is what allows you to come back to the scheduler and still see the text you previously added or deleted. 
 
-## GitHub Screenshots 
+## GitHub Screenshots  
 
-* Below are screenshots to my Github project repository and pages link. 
+* Screenshot of my GitHub repo for the project:
 
 ![img](./assets/HW5-Repo.png)
+
+* Screenshot of my GitHub pages for the project:
+
 ![img](./assets/HW5-Pages.png)
+
+* Screenshot of the working project: 
+
+![img]()
