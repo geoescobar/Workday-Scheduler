@@ -4,8 +4,9 @@ $("#currentDay").text(today.format("dddd, MMMM Do"));
 
 
 
-// Create a for loop for the hours of 9am-5pm & design
+// Create a function to load the time blocks 
 function loadTimeBlock() {
+  // Create a for loop for the hours of 9am-5pm 
   for (var hour = 9; hour < 18; hour++) {
     var currentHour = Number(moment().format('HH'));
     console.log('current hour', currentHour);
@@ -20,7 +21,7 @@ function loadTimeBlock() {
       timeClass = 'future'
     }
 
-    // Record input text from local storage if it exists otherwise leave the input text fields blank
+    // Record input text from local storage if it exists, otherwise leave the input text fields blank
     var localStorageKey = `workdayScheduler-${hour}`
     var inputText;
     if (localStorage.getItem(localStorageKey)) {
@@ -28,6 +29,8 @@ function loadTimeBlock() {
     } else {
       inputText = ''
     }
+
+
 // Creating divs for the columns and rows. Also adding corresponding classes.
 // Adding moment.js to fill in the time blocks 
     $('.container').append(`<div class="row time-block" data-time="${hour}"> 
