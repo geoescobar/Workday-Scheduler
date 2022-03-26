@@ -28,4 +28,4 @@ In this activity, we were tasked with making a functional workday scheduler that
 
 * Screenshot of the working project: 
 
-![img](./assets/HW5-Working-page.png)
+![img](./assets/HW5-Working-Page.png)
